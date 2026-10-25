@@ -18,13 +18,20 @@
 
 ## 📌 Overview
 
-Authorized Motion Monitor
+
+OTele is an authorized motion-monitoring tool that watches a camera feed for movement and can send alerts to a configured destination. It captures frames via OpenCV, detects motion against a rolling baseline, and records clips for review. It is intended strictly for authorized physical-security and lab use.
 
 ---
 
 ## ✨ Features
 
-- Authorized physical-security motion monitor with optional Telegram alerts (lab/local defaults)
+
+- Camera-based motion detection using OpenCV frame differencing
+- Configurable capture interval, clip duration and camera index
+- Alerting to a configured endpoint (token/chat id stored in a local config file)
+- Rolling-baseline detection to reduce false triggers
+- Local JSON configuration persisted to the user's home directory
+- Desktop UI in the OWLSec theme with an offline --self-test
 
 ---
 
@@ -37,8 +44,11 @@ Authorized Motion Monitor
 
 ## 🚀 Usage
 
+
 ```bash
 ./OTele
+./OTele --self-test
+./OTele --help
 ```
 
 ---
